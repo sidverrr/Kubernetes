@@ -13,27 +13,40 @@ First Signup to DigitalOcean if you havn't already. Signup with the above button
 
 > Deployment Video guide [HERE](https://youtu.be/V5-0bJXTq4E)
 
-In the dashboard go to kubernetes section.
+Go to Kubernetes Section
 ![DigitalOcean Kubernetes](images/doks-1.png)
-Select create new cluster
+Select "create new cluster"
 ![Create cluster DigitalOcean Kubernetes](images/doks-2.png)
 Fill out the form and your cluster will be setup within few minuites.
-![choose cluster DigitalOcean Kubernetes](images/doks-3.png)
 ![Creating cluster DigitalOcean Kubernetes](images/doks-4.png)
 
-This is it. It is so simple to create a kubernetes cluster in DigitalOcean. Now we will setup mongoDB in our cluster.
+Now till here we have successfully created our cluster and now we will setup mongoDB in the cluster we made.
 
 ## Deploying MongoDB
-Open Terminal in your system and then follow the steps
+I am using MacOS here. So lets open the terminal.
 
 ```sh
 git clone https://github.com/arpan45/mongodb-cluster-kubernetes.git
 cd mongodb-cluster-kubernetes
 ```
+
+To install kubectl lets use Homebrew so run the command
+
+```sh
+brew install kubectl
+```
+
+Then to check the version you installed run the command
+
+```sh
+kubectl version --client
+```
+
 You must have kubectl installed in your system
 ![Kubectl Version](images/doks-5.png)
 
-You can change the number of replicas and other setup in mongodb-deployment.yaml file.
+The number of replicas and other setup in mongodb-deployment.yaml file can be changed upon one's perspective.
+
 ```sh
 apiVersion: apps/v1
 kind: Deployment
@@ -100,22 +113,22 @@ spec:
           claimName: "mongo-data"
 
 ```
-Once your are in the folder, Enter the following commands in the terminal...
+Lets run this command to deply yaml files
 
 ```sh
 kubectl apply -f .
 ```
 
-You will get something like this:
+The output will be something like this
 ![Kubectl apply](images/doks-6.png)
-So deployments, persistant volumes and all the services are deployed.
+So everything is deployed
 
-Then to see everything up and running. enter the following command in terminal.[Optional]
+To check whether everything till now is working perfectly of not run this command in the terminal.
 ```sh
 kubectl get all
 ```
 ![kubernets get all](images/getall.png)
-We can see that our mongoDB cluster is now setup and working correctly. Now we enter the bash shell of our mongo-client
+As we can see that our mongoDB cluster is now setup and working correctly. Now we enter the bash shell of our mongo-client
 
 ```sh
 kubectl exec deployment/mongo-client -it -- /bin/bash
@@ -126,7 +139,7 @@ Now we can access our mongo shell via noodeport
 > Note: Make sure you have changed the username and password in the 'mongodb-secrets.yaml' file.
 
 ```sh
-mongo --host mongo-nodeport-svc --port 27017 -u arpan -p arpan
+mongodb
 ```
 ![mongo shell kubernetes](images/doks-8.png)
 
