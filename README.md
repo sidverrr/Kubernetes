@@ -1,16 +1,14 @@
 # Deploy MongoDB Cluster on Kubernetes
 ## _Deploy MongoDB Cluster on DigitalOcean Kubernetes_
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=0eeab663047a&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
-
-You can easily deploy MongoDB highly scalabale cluster on DigitalOcean Kubernetes Platform.
+You can easily deploy scalable NoSQL database cluster on DigitalOcean Kubernetes Platform.
 Some prerequisites:
 - Git installed on your system
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) commandline tool installed
-- doctl setup for smooth integration ( [How to install and setup doctl ?](https://docs.digitalocean.com/reference/doctl/how-to/install/) )
+- doctl( [How to install and setup doctl ?](https://docs.digitalocean.com/reference/doctl/how-to/install/) )
 
 ## Getting Started
-In this guide you will get to know how to deploy NoSQL(MongoDB) Cluster on DigitalOcean Kubernetes (DOKS).
+In this writeup you will get to know how to deploy NoSQL(MongoDB) Cluster on DigitalOcean Kubernetes (DOKS).
 First Signup to DigitalOcean if you havn't already. Signup with the above button to get joining free $100 credit to your account.
 
 > Deployment Video guide [HERE](https://youtu.be/V5-0bJXTq4E)
