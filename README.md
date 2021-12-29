@@ -152,6 +152,7 @@ mongo
 ![mongo shell kubernetes](images/main-6.png)
 
 Yee ! We have successfully logged in to our mongo shell. We can test everything is working by inserting a document in a collection.
+
 <br />
 ![mongo shell insert kubernetes](images/main-7.png)
 
