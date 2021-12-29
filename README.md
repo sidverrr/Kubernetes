@@ -14,7 +14,7 @@ First Signup to DigitalOcean if you havn't already. Signup with the above button
 > Deployment Video guide [HERE](https://youtu.be/V5-0bJXTq4E)
 
 Go to Kubernetes Section
-![DigitalOcean Kubernetes](images/doks-1.png)
+![DigitalOcean Kubernetes](images/main.png)
 Select "create new cluster"
 ![Create cluster DigitalOcean Kubernetes](images/doks-2.png)
 Fill out the form and your cluster will be setup within few minuites.
