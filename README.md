@@ -11,14 +11,12 @@ Some prerequisites:
 In this writeup you will get to know how to deploy NoSQL(MongoDB) Cluster on DigitalOcean Kubernetes (DOKS).
 First Signup to DigitalOcean if you havn't already. Signup with the above button to get joining free $100 credit to your account.
 
-> Deployment Video guide [HERE](https://youtu.be/V5-0bJXTq4E)
-
 Go to Kubernetes Section
 ![DigitalOcean Kubernetes](images/main.png)
 Select "create new cluster"
-![Create cluster DigitalOcean Kubernetes](images/doks-2.png)
+
 Fill out the form and your cluster will be setup within few minuites.
-![Creating cluster DigitalOcean Kubernetes](images/doks-4.png)
+![Creating cluster DigitalOcean Kubernetes](images/main-1.png)
 
 Now till here we have successfully created our cluster and now we will setup mongoDB in the cluster we made.
 
@@ -43,7 +41,7 @@ kubectl version --client
 ```
 
 You must have kubectl installed in your system
-![Kubectl Version](images/doks-5.png)
+![Kubectl Version](images/main-2.png)
 
 The number of replicas and other setup in mongodb-deployment.yaml file can be changed upon one's perspective.
 
@@ -120,31 +118,31 @@ kubectl apply -f .
 ```
 
 The output will be something like this
-![Kubectl apply](images/doks-6.png)
+![Kubectl apply](images/main-3.png)
 So everything is deployed
 
 To check whether everything till now is working perfectly of not run this command in the terminal.
 ```sh
 kubectl get all
 ```
-![kubernets get all](images/getall.png)
+![kubernets get all](images/main-4.png)
 As we can see that our mongoDB cluster is now setup and working correctly. Now we enter the bash shell of our mongo-client
 
 ```sh
 kubectl exec deployment/mongo-client -it -- /bin/bash
 ```
-![Mongoclient kubernetes](images/doks-7.png)
+![Mongoclient kubernetes](images/main-5.png)
 Now we can access our mongo shell via noodeport
 
 > Note: Make sure you have changed the username and password in the 'mongodb-secrets.yaml' file.
 
 ```sh
-mongodb
+mongo
 ```
-![mongo shell kubernetes](images/doks-8.png)
+![mongo shell kubernetes](images/main-6.png)
 
 Yee ! We have successfully logged in to our mongo shell. We can test everything is working by inserting a document in a collection.
-![mongo shell insert kubernetes](images/doks-9.png)
+![mongo shell insert kubernetes](images/main-7.png)
 
 ## License
 
