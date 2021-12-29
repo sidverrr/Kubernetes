@@ -12,10 +12,14 @@ In this writeup you will get to know how to deploy NoSQL(MongoDB) Cluster on Dig
 First Signup to DigitalOcean if you havn't already. Signup with the above button to get joining free $100 credit to your account.
 
 Go to Kubernetes Section
+<br />
+
 ![DigitalOcean Kubernetes](images/main.png)
+
 Select "create new cluster"
 
-Fill out the form and your cluster will be setup within few minuites.
+Fill out the form and your cluster will be setup within few minutes.
+<br />
 ![Creating cluster DigitalOcean Kubernetes](images/main-1.png)
 
 Now till here we have successfully created our cluster and now we will setup mongoDB in the cluster we made.
@@ -41,6 +45,8 @@ kubectl version --client
 ```
 
 You must have kubectl installed in your system
+<br /><br />
+
 ![Kubectl Version](images/main-2.png)
 
 The number of replicas and other setup in mongodb-deployment.yaml file can be changed upon one's perspective.
@@ -118,7 +124,9 @@ kubectl apply -f .
 ```
 
 The output will be something like this
+<br />
 ![Kubectl apply](images/main-3.png)
+<br />
 So everything is deployed
 
 To check whether everything till now is working perfectly of not run this command in the terminal.
