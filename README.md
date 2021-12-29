@@ -134,12 +134,14 @@ To check whether everything till now is working perfectly of not run this comman
 kubectl get all
 ```
 ![kubernets get all](images/main-4.png)
+<br />
 As we can see that our mongoDB cluster is now setup and working correctly. Now we enter the bash shell of our mongo-client
 
 ```sh
 kubectl exec deployment/mongo-client -it -- /bin/bash
 ```
 ![Mongoclient kubernetes](images/main-5.png)
+<br />
 Now we can access our mongo shell via noodeport
 
 > Note: Make sure you have changed the username and password in the 'mongodb-secrets.yaml' file.
@@ -150,6 +152,7 @@ mongo
 ![mongo shell kubernetes](images/main-6.png)
 
 Yee ! We have successfully logged in to our mongo shell. We can test everything is working by inserting a document in a collection.
+<br />
 ![mongo shell insert kubernetes](images/main-7.png)
 
 ## License
